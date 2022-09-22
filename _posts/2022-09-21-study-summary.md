@@ -72,9 +72,13 @@ const List: React.FC<IProps> = ({ people, test }) => {
 - 删除 baseurl 的/后
 
 ```console
-Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
-Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/\_siteTrent1900.github.io
-htmlproofer 3.19.4 | Error: _site does not exist
+            Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
+       Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_siteTrent1900.github.io
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 0.53 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+htmlproofer 3.19.4 | Error:  _site does not exist
 ```
 
 - up 主没有写 baseurl,我删除试试看.
