@@ -66,3 +66,6 @@ const List: React.FC<IProps> = ({ people, test }) => {
 ```
 
 5. by bundle lock --add-platform x86_64-linux add a new platform to gemfile. to pass the workflow error.
+6. still not show pages, just see the index.html file, but not the file in .site. 系统没有从\_site file render 网页.
+7. 直接在 git hub 修改,然后手动 run workflow.最后本地删除在 clone
+8. 
