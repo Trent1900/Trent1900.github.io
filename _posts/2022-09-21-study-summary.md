@@ -64,3 +64,5 @@ const List: React.FC<IProps> = ({ people, test }) => {
   console.log(test);
 };
 ```
+
+5. by bundle lock --add-platform x86_64-linux add a new platform to gemfile. to pass the workflow error.
