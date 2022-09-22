@@ -4,17 +4,16 @@ author: Trent1900
 date: 2022-09-21 10:32:00 +1000
 categories: [Blogging, Summary]
 tags: [fullstack, study]
-pin: true
 ---
 
 record my todo and technical summary during my study progress.
 Mandarin is my MotherLanguage, for easy skimming and scanning, a big part of my summary will be written in Mandarin and it is for my studying and reviewing purpose.
 
-## Today's Todo
+### [deploy to github page with Jekyll(with SEO)](#deploy-问题)
 
-- [X]host my blog for daily study summery
-- []host my blog for daily study summery
-- [X]host my blog for daily study summery
+<!-- todo:how Jekyll utilize SEO -->
+
+[MarkDown anchor point #tag jumping within same page](#markdown-实现跳转)
 
 ## Knowledge and summary
 
@@ -71,14 +70,48 @@ const List: React.FC<IProps> = ({ people, test }) => {
 
 - 删除 baseurl 的/后
 
+#### Deploy 问题
+
 ```console
-            Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
-       Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_siteTrent1900.github.io
- Incremental build: disabled. Enable with --incremental
+Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
+Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_siteTrent1900.github.io
+Incremental build: disabled. Enable with --incremental
       Generating...
                     done in 0.53 seconds.
  Auto-regeneration: disabled. Use --watch to enable.
 htmlproofer 3.19.4 | Error:  _site does not exist
 ```
 
-- up 主没有写 baseurl,我删除试试看.
+- up 主没有写 baseurl,我删除试试看.  
+  <span style='color:green; background:pink'>it worked.</span> by compare the GH workflow action
+
+```
+Run bash tools/deploy.sh
+Configuration file: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_config.yml
+ Theme Config file: /home/runner/work/Trent1900.github.io/Trent1900.github.io/vendor/bundle/ruby/2.6.0/gems/jekyll-theme-chirpy-5.2.1/_config.yml
+            Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
+       Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+                    done in 0.533 seconds.
+ Auto-regeneration: disabled. Use --watch to enable.
+Running ["HtmlCheck", "ImageCheck", "LinkCheck", "ScriptCheck"] on ["_site"] on *.html...
+```
+
+### summary for section (github hosting)
+
+1. 可以知道,deploy 的 config 写在 tools/deploy.sh 中.
+2. 了解了一点点 deploy 的流程
+   1. action yml 写在.github/workflows 文件夹下.
+   2. workflow 报错的话,需要认真读报错的信息,然后找解决方法.
+   3. html pages all hosted on`_site` file,如果 MD 无法写的内容,可以手动修改 html.
+
+## markdown 实现跳转
+
+```js
+由于MD自动给每一个标题生成了一个id,这里用<h2>举个例子,<h1>~<h6>~<h100>都支持默认生成id
+## markdown 实现跳转
+系统自动生成的id=markdown-实现跳转, 全部小写,然后用减号-连接.利用这个我们可以写出锚点(#markdown-实现跳转).
+
+`**如果是中文锚点,那会更加简单,不用加连字符.**`
+```
