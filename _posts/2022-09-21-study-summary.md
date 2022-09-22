@@ -68,4 +68,13 @@ const List: React.FC<IProps> = ({ people, test }) => {
 5. by bundle lock --add-platform x86_64-linux add a new platform to gemfile. to pass the workflow error.
 6. still not show pages, just see the index.html file, but not the file in .site. 系统没有从\_site file render 网页.
 7. 直接在 git hub 修改,然后手动 run workflow.最后本地删除在 clone
-8. 
+
+- 删除 baseurl 的/后
+
+```console
+Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
+Destination: /home/runner/work/Trent1900.github.io/Trent1900.github.io/\_siteTrent1900.github.io
+htmlproofer 3.19.4 | Error: _site does not exist
+```
+
+- up 主没有写 baseurl,我删除试试看.
