@@ -1,5 +1,5 @@
 ---
-title: Study Summary
+title: 20 September 2022
 author: Trent1900
 date: 2022-09-21 10:32:00 +1000
 categories: [Blogging, Summary]
@@ -13,7 +13,9 @@ Mandarin is my MotherLanguage, for easy skimming and scanning, a big part of my 
 
 <!-- todo:how Jekyll utilize SEO -->
 
-[MarkDown anchor point #tag jumping within same page](#markdown-实现跳转)
+### [MarkDown anchor point #tag jumping within same page](#markdown-实现跳转)
+
+### [枚举类型想要 map](#枚举类型想要-map)
 
 ## Knowledge and summary
 
@@ -44,7 +46,7 @@ money: { 美金: 100, 日元: 1000 },
 
 //如果不用解构赋值,那么
 
-let xiaoming = OBJ.people,
+let person = OBJ.people,
 
 //如果用了解构 with destructure
 
@@ -64,13 +66,13 @@ const List: React.FC<IProps> = ({ people, test }) => {
 };
 ```
 
+#### Deploy 问题
+
 5. by bundle lock --add-platform x86_64-linux add a new platform to gemfile. to pass the workflow error.
 6. still not show pages, just see the index.html file, but not the file in .site. 系统没有从\_site file render 网页.
 7. 直接在 git hub 修改,然后手动 run workflow.最后本地删除在 clone
 
 - 删除 baseurl 的/后
-
-#### Deploy 问题
 
 ```console
 Source: /home/runner/work/Trent1900.github.io/Trent1900.github.io
@@ -98,7 +100,7 @@ Configuration file: /home/runner/work/Trent1900.github.io/Trent1900.github.io/_c
 Running ["HtmlCheck", "ImageCheck", "LinkCheck", "ScriptCheck"] on ["_site"] on *.html...
 ```
 
-### summary for section (github hosting)
+### sectional summary (github hosting)
 
 1. 可以知道,deploy 的 config 写在 tools/deploy.sh 中.
 2. 了解了一点点 deploy 的流程
@@ -114,4 +116,21 @@ Running ["HtmlCheck", "ImageCheck", "LinkCheck", "ScriptCheck"] on ["_site"] on 
 系统自动生成的id=markdown-实现跳转, 全部小写,然后用减号-连接.利用这个我们可以写出锚点(#markdown-实现跳转).
 
 `**如果是中文锚点,那会更加简单,不用加连字符.**`
+```
+
+### 枚举类型想要 map
+
+```js
+Object.keys(EProfileEditField) 这可以形成一个arr,arr里的内容是EProfileEditField这个key的value.
+想要map的话要如下:
+(Object.keys(MyEnum) as Array<keyof typeof MyEnum>).map((key) => {})
+Object.keys(MyEnum) 返回一个key 组成的array.
+```
+
+### 如何隐藏 input=file 的 box.
+
+```js
+https://stackoverflow.com/questions/572768/styling-an-input-type-file-button
+css style for 2nd solution.
+http://jsfiddle.net/m8x2fobw/
 ```
