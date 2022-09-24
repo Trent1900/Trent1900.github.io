@@ -118,7 +118,7 @@ Running ["HtmlCheck", "ImageCheck", "LinkCheck", "ScriptCheck"] on ["_site"] on 
 `**如果是中文锚点,那会更加简单,不用加连字符.**`
 ```
 
-### 枚举类型想要 map
+### 枚举类型想要 map ???
 
 ```js
 Object.keys(EProfileEditField) 这可以形成一个arr,arr里的内容是EProfileEditField这个key的value.
@@ -127,9 +127,22 @@ Object.keys(EProfileEditField) 这可以形成一个arr,arr里的内容是EProfi
 Object.keys(MyEnum) 返回一个key 组成的array.
 ```
 
+### 枚举类型想要 map 的围魏救赵方法
+
+```js
+直接把currentUser这个obj传递给initialForm value.
+const initialFormValues = (currentUser: IUserBase | Partial<IUserBase>) => ({ ...currentUser });
+use state时候,直接赋值.
+const [formValues, setFormValues] = useState<IUserBase | Partial<IUserBase>>(
+		initialFormValues(currentUser)
+	);
+
+```
+
 ### 如何隐藏 input=file 的 box.
 
 ```js
+有些input是file 类型,默认有一个点击上传文件的框,如果不想要这个框,只想要EDIT这个文字链接,可以用label包起来,然后把input的位置放到最右下脚.
 https://stackoverflow.com/questions/572768/styling-an-input-type-file-button
 css style for 2nd solution.
 http://jsfiddle.net/m8x2fobw/
