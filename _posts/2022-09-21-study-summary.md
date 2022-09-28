@@ -125,6 +125,7 @@ Object.keys(EProfileEditField) 这可以形成一个arr,arr里的内容是EProfi
 想要map的话要如下:
 (Object.keys(MyEnum) as Array<keyof typeof MyEnum>).map((key) => {})
 Object.keys(MyEnum) 返回一个key 组成的array.
+Object.value(MyEnum) 返回一个value组成的array.
 ```
 
 ### 枚举类型想要 map 的围魏救赵方法
@@ -146,4 +147,10 @@ const [formValues, setFormValues] = useState<IUserBase | Partial<IUserBase>>(
 https://stackoverflow.com/questions/572768/styling-an-input-type-file-button
 css style for 2nd solution.
 http://jsfiddle.net/m8x2fobw/
+```
+
+### chrome does not take document.body.scrollTop
+
+```js
+chrome does not take document.body.scrollTop, instead, it like document.documentElement.scrollTop
 ```

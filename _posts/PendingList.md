@@ -36,3 +36,10 @@ exports.deleteResume = function(req, res, next) {
 
 #### profile :nationality exist in MongoDB?<span style='color:green; background:pink'>没有<span>
 
+#### 24/09/2022 任务: 1. 做出静态组件.
+
+### ts 可以连续解构赋值吗?
+
+# 考一个 SA AWS 的证书
+
+###  TODO想做个翻页效果给我的P1feature
