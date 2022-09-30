@@ -1,5 +1,5 @@
 ---
-title: 20 September 2022
+title: week 39 summary
 author: Trent1900
 date: 2022-09-21 10:32:00 +1000
 categories: [Blogging, Summary]
