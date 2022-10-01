@@ -140,17 +140,14 @@ const [formValues, setFormValues] = useState<IUserBase | Partial<IUserBase>>(
 
 ```
 
-### 如何隐藏 input=file 的 box.
+### hide input box
 
-```js
-有些input是file 类型,默认有一个点击上传文件的框,如果不想要这个框,只想要EDIT这个文字链接,可以用label包起来,然后把input的位置放到最右下脚.
-https://stackoverflow.com/questions/572768/styling-an-input-type-file-button
-css style for 2nd solution.
-http://jsfiddle.net/m8x2fobw/
-```
+> use position absolute to hide it to corner check [stack overflow](https://stackoverflow.com/questions/572768/styling-an-input-type-file-button) and its [css](http://jsfiddle.net/m8x2fobw/) <!-- prettier-ignore -->
+{:.prompt-tip}
+
+有些 input 是 file 类型,默认有一个点击上传文件的框,如果不想要这个框,只想要 EDIT 这个文字链接,可以用 label 包起来,然后把 input 的位置放到最右下脚.
 
 ### chrome does not take document.body.scrollTop
 
-```js
-chrome does not take document.body.scrollTop, instead, it like document.documentElement.scrollTop
-```
+> chrome does not take document.body.scrollTop, instead, use document.documentElement.scrollTop <!-- prettier-ignore -->
+{:.prompt-tip}
