@@ -7,6 +7,8 @@ tags: [notion, pending]
 pin: true
 ---
 
+record flash of thoughts during project that might worth of spending some time on, but don't wanted to be distracted and lose focus.
+
 #### enum list 如何 map,拿到 key-value pair
 
 #### resume storage location in MongoDB??
@@ -37,10 +39,11 @@ exports.deleteResume = function(req, res, next) {
 
 #### profile :nationality exist in MongoDB?<span style='color:green; background:pink'>没有<span>
 
-#### 24/09/2022 任务: 1. 做出静态组件.
+- [x] 24/09/2022 任务: 1. 做出静态组件.
 
 ### ts 可以连续解构赋值吗?
 
-# 考一个 SA AWS 的证书
+- [ ] 考一个 SA AWS certificate
 
-### TODO 想做个翻页效果给我的 P1feature
+- [ ] TODO 想做个翻页效果给我的 P1feature
+- [ ] study how to change favicon(tried 20 mins failed on 2/Oct/2022)

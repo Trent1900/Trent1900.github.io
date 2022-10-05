@@ -9,15 +9,14 @@ tags: [fullstack, study]
 record my todo and technical summary during my study progress.
 Mandarin is my MotherLanguage, for easy skimming and scanning, a big part of my summary will be written in Mandarin and it is for my studying and reviewing purpose.
 
+### convert to inline
+
+> convert to inline will result in a gap between elements. coz `return回车` & spaces(if there are any) are converted into ONE space.that where the space comes from. <!--prettier-ignore --> 
+{:.prompt-info}
+
 ### [deploy to github page with Jekyll(with SEO)](#deploy-问题)
 
-<!-- todo:how Jekyll utilize SEO -->
-
-### [MarkDown anchor point #tag jumping within same page](#markdown-实现跳转)
-
-### [枚举类型想要 map](#枚举类型想要-map)
-
-## Knowledge and summary
+### for future study
 
 1. [**Mermaid**](https://github.com/mermaid-js/mermaid) is a great diagrams generation tool. To enable it on your post, add the following to the YAML block:
 
@@ -66,10 +65,10 @@ const List: React.FC<IProps> = ({ people, test }) => {
 };
 ```
 
-#### Deploy 问题
+#### Issues when try to Deploy
 
 5. by bundle lock --add-platform x86_64-linux add a new platform to gemfile. to pass the workflow error.
-6. still not show pages, just see the index.html file, but not the file in .site. 系统没有从\_site file render 网页.
+6. still not show pages, just see the index.html file, but not the file in .site. 系统没有从`_site` file render 网页.
 7. 直接在 git hub 修改,然后手动 run workflow.最后本地删除在 clone
 
 - 删除 baseurl 的/后
@@ -84,8 +83,9 @@ Incremental build: disabled. Enable with --incremental
 htmlproofer 3.19.4 | Error:  _site does not exist
 ```
 
-- up 主没有写 baseurl,我删除试试看.  
-  <span style='color:green; background:pink'>it worked.</span> by compare the GH workflow action
+- up 主没有写 baseurl,我删除试试看.
+  > Check the GitHub repo work flow action error, I realize that the base url does not looks normal.<!--prettier-ignore --> 
+  {:.prompt-info}
 
 ```
 Run bash tools/deploy.sh
@@ -102,13 +102,13 @@ Running ["HtmlCheck", "ImageCheck", "LinkCheck", "ScriptCheck"] on ["_site"] on 
 
 ### sectional summary (github hosting)
 
-1. 可以知道,deploy 的 config 写在 tools/deploy.sh 中.
+1. known: deploy 的 config 写在 tools/deploy.sh 中.
 2. 了解了一点点 deploy 的流程
    1. action yml 写在.github/workflows 文件夹下.
    2. workflow 报错的话,需要认真读报错的信息,然后找解决方法.
    3. html pages all hosted on`_site` file,如果 MD 无法写的内容,可以手动修改 html.
 
-## markdown 实现跳转
+### markdown 实现跳转
 
 ```js
 由于MD自动给每一个标题生成了一个id,这里用<h2>举个例子,<h1>~<h6>~<h100>都支持默认生成id
@@ -125,7 +125,7 @@ Object.keys(EProfileEditField) 这可以形成一个arr,arr里的内容是EProfi
 想要map的话要如下:
 (Object.keys(MyEnum) as Array<keyof typeof MyEnum>).map((key) => {})
 Object.keys(MyEnum) 返回一个key 组成的array.
-Object.value(MyEnum) 返回一个value组成的array.
+Object.values(MyEnum) 返回一个value组成的array.
 ```
 
 ### 枚举类型想要 map 的围魏救赵方法
