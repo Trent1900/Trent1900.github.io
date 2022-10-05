@@ -7,7 +7,8 @@ tags: [notion, pending]
 pin: true
 ---
 
-record flash of thoughts during project that might worth of spending some time on, but don't wanted to be distracted and lose focus.
+> record flash of thoughts during project that might worth of spending some time on, but don't wanted to be distracted and lose focus.<!-- prettier-ignore -->
+{:.prompt-info}
 
 #### enum list 如何 map,拿到 key-value pair
 
@@ -16,7 +17,7 @@ record flash of thoughts during project that might worth of spending some time o
 - 👇🏻 是 add pdf resume 的网络请求:
 
 ```console
-http://localhost:3000/api/s3/presignedurl?name=Australia%20VV%20-%20Important%20Information%20-%2013-Mar-13.pdf&type=application/pdf&resType=resume&category=resources
+http://localhost:3000/api/s3/presignedurl?name=(....)/pdf&resType=resume&category=resources
 看到s3 => AWS s3.
 ```
 
