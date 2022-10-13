@@ -59,10 +59,19 @@ exports.deleteResume = function(req, res, next) {
 - [ ] check box 做成 toggle
 - [ ] 设置 ci/cd,让我的网页只做本地部署.(不重要)
 - [x] error handling
-- [ ] 日期格式在手机端报错.需要检查.
+- [x] 日期格式在手机端报错.需要检查.
 
-### JobPin 
-~~~
-EStateAsyncStatus
+### JobPin
 
-~~~
+- [ ] 用 mui 作静态
+- [ ] 在 test branch 上写代码,如果需要,复制到 21 branch 上面.
+- [ ] 系统学习一下 typescript 的代码
+- [ ] 为什么 button 的周围会有一圈自己的 position 包围着,right:不起作用.
+
+```tsx
+const ButtonWrapper = styled(Button)`
+  align-items: flex-end;
+  position: absolute;
+  left: 100%;
+`;
+```
