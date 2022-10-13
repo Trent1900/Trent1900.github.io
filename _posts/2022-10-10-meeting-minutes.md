@@ -9,7 +9,6 @@ tags: [meeting minute]
 ### 调试 input 框尝希望去掉 Legend
 
 - [x] ~~`InputLabelProps={{ shrink: false }}`~~
-- [x] ~~`sx={{'& legend': { display: 'none' },'& fieldset': { top: 0 },}}`~~
 - [x] 尝试 className in styled component, with warning.
 
   > [mui 宝藏库 ](https://v4.mui.com/components/text-fields/#components)<!-- prettier-ignore -->
