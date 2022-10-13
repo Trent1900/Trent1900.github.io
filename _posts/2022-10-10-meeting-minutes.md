@@ -8,25 +8,29 @@ tags: [meeting minute]
 
 ### 调试 input 框尝希望去掉 Legend
 
-- [ ] ~~InputLabelProps={{ shrink: false }}~~
-- [ ] ~~sx={{'& legend': { display: 'none' },'& fieldset': { top: 0 },}}~~
-- [x] 尝试 className in styled component, failed.
+- [x] ~~`InputLabelProps={{ shrink: false }}`~~
+- [x] ~~`sx={{'& legend': { display: 'none' },'& fieldset': { top: 0 },}}`~~
+- [x] 尝试 className in styled component, with warning.
+
   > [mui 宝藏库 ](https://v4.mui.com/components/text-fields/#components)<!-- prettier-ignore -->
 {:.prompt-tip}
 
 ### P3 小故事
 
-别人写的组件,没必要的 margin 一层又一层,引用过来,太难用了.
+- other components with strange margin and padding but I cannot modify on my code. (avatar cropping and display section)
 
-- [ ] 构建 redux for resume
+  > solution: with first-child, set the size of first-child, with flex box's justify-contents and align-items that css on upper level but works on child<!-- prettier-ignore -->
+{:.prompt-tip}
+
+- [x] 构建 redux for resume
 - [ ] storeHase/ useDispatch
-- [ ] console.log(companyForm, 看看里面有什么,还想看看大写的 Company Form b4, after 有啥变化.)
+- [x] console.log(companyForm, 看看里面有什么,还想看看大写的 Company Form b4, after 有啥变化.)
 - [ ] 给 button 加 loading 和 disable
 
 ```
 company redux 中有 个logo={
     public_id(pin):"pyzkiyjovolgcrkn9pry"
-version(pin):1664782710
+version(pin):some digits一些shu
 signature(pin):"3f44c9009c5ce2b52031228e3ababbfe328588d4"
 width(pin):273
 height(pin):273
