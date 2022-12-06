@@ -83,7 +83,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://scontent.fmel11-1.fna.fbcdn.net/v/t39.30808-1/307703607_2394630160684809_2898564544079222198_n.jpg?stp=dst-jpg_s480x480&_nc_cat=107&ccb=1-7&_nc_sid=7206a8&_nc_ohc=zJDvoDkGUJEAX-ZNmjs&_nc_ht=scontent.fmel11-1.fna&oh=00_AT-Vp39-e37TQkSbJYg4zOthuPGXzSEqsDA7THjXONgr3Q&oe=6330AB96
+avatar: https://www.clipartmax.com/png/middle/51-514932_sea-otter-clip-art-free-vector-4vector-sea-otter.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
