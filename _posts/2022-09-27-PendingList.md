@@ -46,8 +46,8 @@ exports.deleteResume = function(req, res, next) {
 ### ts 可以连续解构赋值吗?
 
 - [ ] 考一个 SA AWS certificate
-- [ ] TODO 想做个翻页效果给我的 P1feature
-- [ ] study how to change favicon(tried 20 mins failed on 2/Oct/2022)
+- [x] TODO 想做个翻页效果给我的 P1feature
+- [x] study how to change favicon(tried 20 mins failed on 2/Oct/2022)
 
 ### 创建一个常量用来放 resume 相关的.
 
@@ -63,10 +63,10 @@ exports.deleteResume = function(req, res, next) {
 
 ### JobPin
 
-- [ ] 用 mui 作静态
-- [ ] 在 test branch 上写代码,如果需要,复制到 21 branch 上面.
-- [ ] 系统学习一下 typescript 的代码
-- [ ] 为什么 button 的周围会有一圈自己的 position 包围着,right:不起作用.
+- [x] 用 mui 作静态
+- [x] 在 test branch 上写代码,如果需要,复制到 21 branch 上面.
+- [x] 系统学习一下 typescript 的代码
+- [x] 为什么 button 的周围会有一圈自己的 position 包围着,right:不起作用.
 
 ```tsx
 const ButtonWrapper = styled(Button)`
@@ -75,3 +75,5 @@ const ButtonWrapper = styled(Button)`
   left: 100%;
 `;
 ```
+
+### 
