@@ -1,5 +1,5 @@
 ---
-title: Notions, ideas and pending
+title: ideas and todo list
 author: Trent1900
 date: 2022-09-24 03:32:00 +1000
 categories: [Blogging, pending list]
@@ -76,4 +76,8 @@ const ButtonWrapper = styled(Button)`
 `;
 ```
 
-### 
+### build a backend server with CURD, Swagger, helmet, cors, winston and test.
+
+- [x] build a server listening to port 4000
+- [x] with app.use middleware function (CURD)
+- [x] test on Mansoor's web (30mins)
