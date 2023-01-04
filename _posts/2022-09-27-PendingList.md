@@ -81,3 +81,7 @@ const ButtonWrapper = styled(Button)`
 - [x] build a server listening to port 4000
 - [x] with app.use middleware function (CURD)
 - [x] test on Mansoor's web (30mins)
+
+### id validation in mongoDB
+
+- [ ] need check ID length (12 bit) before use it to findById.
