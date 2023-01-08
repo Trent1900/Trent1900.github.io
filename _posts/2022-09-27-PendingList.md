@@ -84,4 +84,10 @@ const ButtonWrapper = styled(Button)`
 
 ### id validation in mongoDB
 
-- [ ] need check ID length (12 bit) before use it to findById.
+- [x] need check ID length (12 bit) with error middleware.
+
+### add authorization and authentication to user login
+
+1. - [ ] create user schema for create and login(auth)
+2. - [ ] in create schema, modify it to use bcrypt.
+
