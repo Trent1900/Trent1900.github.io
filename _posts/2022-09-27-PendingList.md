@@ -88,6 +88,9 @@ const ButtonWrapper = styled(Button)`
 
 ### add authorization and authentication to user login
 
-1. - [ ] create user schema for create and login(auth)
-2. - [ ] in create schema, modify it to use bcrypt.
+1. - [x] create user schema for create and login(auth)
+2. - [x] in create schema, add method to it so that its instance can use bcrypt.
 
+### how to add a token to header from vs code after login password verified.
+
+- [ ] how to add a token to header from vs code after login password verified.
