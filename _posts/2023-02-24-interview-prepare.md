@@ -4,6 +4,7 @@ author: Trent1900
 date: 2023-3-1 19:02:00 +1000
 categories: [Blogging]
 tags: [interview]
+published: false
 ---
 
 Start date: 2 Mar 2023te
@@ -11,15 +12,17 @@ end date: TBC
 
 ### 面试准备
 
-#### 逐条STAR
-1. •	Implemented font optimization with Next.js's next/font to achieve zero layout shifting and enhance user experience (UX).
-   1. 情景/任务：主页第一次load的时候，字体是默认的字体，下一秒，特殊字体加载后，按键的位置变化了。有多烦人取决于当时网络的快慢。
-   2. 行动： 测试网页加载时候，字体的加载顺序，如果网速太快，区别就不明显，所以开了3g，清了catch，然后reload页面。
-ts 字体：
+#### 逐条 STAR
+
+1. • Implemented font optimization with Next.js's next/font to achieve zero layout shifting and enhance user experience (UX).
+
+   1. 情景/任务：主页第一次 load 的时候，字体是默认的字体，下一秒，特殊字体加载后，按键的位置变化了。有多烦人取决于当时网络的快慢。
+   2. 行动： 测试网页加载时候，字体的加载顺序，如果网速太快，区别就不明显，所以开了 3g，清了 catch，然后 reload 页面。
+      ts 字体：
 
 1. preload，增加了用户体验
-2. 字体编译，加了乱码 crypt，不会重复
-3. subset, 更小体积
+1. 字体编译，加了乱码 crypt，不会重复
+1. subset, 更小体积
 
 #### 在 form 当中，label 一直是需要的
 
@@ -53,4 +56,3 @@ ts 字体：
 ```js
 be;
 ```
-
