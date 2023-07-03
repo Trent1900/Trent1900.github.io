@@ -94,3 +94,4 @@ const ButtonWrapper = styled(Button)`
 ### how to add a token to header from vs code after login password verified.
 
 - [ ] how to add a token to header from vs code after login password verified.
+- [ ] 在 connection string 里面修改参数，可以使 node 在保存的时候自动设置保存的 database。
