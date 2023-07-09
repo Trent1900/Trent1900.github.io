@@ -3,7 +3,7 @@ title: use generic to help with the returned value
 author: Trent1900
 date: 2023-7-2 22:02:00 +1000
 categories: [Blogging, jwt]
-tags: [jwt decode]
+tags: [jwt decode, type]
 ---
 
 ### data type of jwt verify function
