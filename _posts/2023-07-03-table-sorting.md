@@ -10,12 +10,8 @@ tags: [logout]
 
 - pass the list for sorting, and we will need to know which column we want to start sorting, so we will need two argument, which is the list and the column, last but not least, we would need to know the sorting order. by now we have three parameters in the function.
 
-```typescript
-export function listSort<T extends Record<number, string>>(
-  list: T[],
-  key: keyof T,
-  isAscending: boolean
-) {
+```ts
+export function listSort<T>(list: T[], key: keyof T, isAscending: boolean) {
   let sortedList;
   sortedList = [...list].sort((a, b) => {
     const valueA = a[key];
@@ -52,3 +48,15 @@ export function listSort<T extends Record<number, string>>(
 - If the values have different types or are not strings or numbers, a default value of 0 is returned.
 
 8. Finally, the sortedList, which is the list that we rearranged just now, is returned.
+
+> some tips about generic in ts <!-- prettier-ignore -->
+{:.prompt-tip}
+
+- utilize the `T extends Record<number, string>` syntax in TypeScript to indicate that the generic type T can be an object with keys that are of type number, similar to the example object provided
+
+```ts
+const myObj = {
+  1: "first",
+  second: "second",
+};
+```
