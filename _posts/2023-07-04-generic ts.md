@@ -35,7 +35,7 @@ export function verifyJWT<T>(token: string) {
 }
 ```
 
-When calling this function, we can specify the type of the returned value:
+- When calling this function, we can specify the type of the returned value:
 
 ```ts
 type Decode = {
