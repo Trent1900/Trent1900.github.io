@@ -49,6 +49,42 @@ if (!decoded) {
 const sessionId = decoded.sessionId;
 ```
 
+> Use generics in react component<!-- prettier-ignore -->
+{:.prompt-tip}
+```ts
+import React from "react";
+
+// Define a generic type for the props of the component
+type ButtonProps<T> = {
+  label: string;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  data: T; // The generic data prop
+};
+
+// Create a generic component that accepts the generic type as a prop
+function Button<T>({ label, onClick, data }: ButtonProps<T>) {
+  return (
+    <button onClick={onClick}>
+      {label}: {data}
+    </button>
+  );
+}
+
+// Usage example:
+const App = () => {
+  // Specify the data type when using the Button component
+  return (
+    <div>
+      <Button<string> label="String Button" onClick={() => alert("Clicked!")} data="Hello" />
+      <Button<number> label="Number Button" onClick={() => alert("Clicked!")} data={42} />
+    </div>
+  );
+};
+
+export default App;
+
+```
+
 > Summary<!-- prettier-ignore -->
 {:.prompt-tip}
 
