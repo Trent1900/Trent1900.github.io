@@ -72,7 +72,14 @@ const DropdownItem = ({ item }: DropdownItemProps) => {
     >
       {item.title}
       {Array.isArray(item?.subItem) && isOpen && (
-        <div style={{ marginLeft: "20px" }}>
+        <div
+          style={{
+            position: "absolute",
+            top: "0",
+            left: "100px",
+            width: "100px",
+          }}
+        >
           {item.subItem.map((childItem) => (
             <DropdownItem key={childItem.title} item={childItem} />
           ))}
@@ -99,4 +106,4 @@ export default DropdownList;
 ))}`.
 
 - that is how to implement the recursion method to create an dropdown list.
-- further improvement: considering `accessibility` and `keyboard events`
+- further improvement(TODOS:): considering `accessibility` and `keyboard events`
