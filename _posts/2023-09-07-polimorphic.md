@@ -43,15 +43,99 @@ export default MyComponent;
 
 ```tsx
 type Props<C extends React.ElementType> = {
-  as: C;
+  as?: C;
   children: React.ReactNode;
 } & React.ComponentPropsWithoutRef<C>;
-const MyComponent = ({ as, children }: Props) => {
+const MyComponent = <C extends React.ElementType>({
+  as,
+  children,
+  ...restProps
+}: Props<C>) => {
   const Component = as || "div";
-  return <Component> {children}</Component>;
+  return <Component {...restProps}> {children}</Component>;
 };
 
 export default MyComponent;
+```
+
+- in the above example, we have `const Component = as || "div";` that means if the optional as is undefined, the Component will have a default value of `div`. but does Typescript know it? Look at the code below:
+
+```tsx
+<MyComponent href="">hello world</MyComponent>
+```
+
+- there would be no warning by `Typescript` which is no good, because `MyComponent` with no preset `as` props will become an `div`, and to set an `href` attribute to a `div` is not something good, we want TS to give us some waring.here is how we do it:
+
+```tsx
+type Props<C extends React.ElementType> = {
+  as?: C;
+  children: React.ReactNode;
+} & React.ComponentPropsWithoutRef<C>;
+const MyComponent = <C extends React.ElementType = "div">({
+  as,
+  children,
+  ...restProps
+}: Props<C>) => {
+  const Component = as || "div";
+  return <Component {...restProps}> {children}</Component>;
+};
+
+export default MyComponent;
+```
+
+- now we want to make the `Props<C>` 'clean' up a bit, so we can leverage `React.PropsWithChildren` and the code will look like this:
+
+```tsx
+import {
+  ElementType,
+  ComponentPropsWithoutRef,
+  PropsWithChildren,
+} from "react";
+type RainBow = "orange" | "yellow" | "purple" | "black" | "green" | "red";
+type TextProps<C extends ElementType> = {
+  as?: C;
+  color?: RainBow | "lime";
+};
+type Props<C extends React.ElementType> = PropsWithChildren<TextProps<C>> &
+  ComponentPropsWithoutRef<C>;
+
+const MyComponent = <C extends ElementType = "div">({
+  as,
+  color = "lime",
+  children,
+  ...otherProps
+}: Props<C>) => {
+  const Component = as || "div";
+  return (
+    <Component {...otherProps} style={{ color: `${color}` }}>
+      {children}
+    </Component>
+  );
+};
+export default MyComponent;
+```
+
+- now it is time to make it reusable. we split `as` and `color` into two different props.
+
+```tsx
+type AsProp<C extends React.ElementType> = {
+  as?: C;
+};
+
+type TextProps = { color?: Rainbow | "black" };
+```
+
+- and we can change the PolymorphicComponentProp utility definition to include the as prop, component props, and children prop:
+
+```tsx
+type AsProp<C extends React.ElementType> = {
+  as?: C;
+};
+
+type PolymorphicComponentProp<
+  C extends React.ElementType,
+  Props = {}
+> = React.PropsWithChildren<Props & AsProp<C>>;
 ```
 
 - so the final result will looks like this:

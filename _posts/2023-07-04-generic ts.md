@@ -51,6 +51,7 @@ const sessionId = decoded.sessionId;
 
 > Use generics in react component<!-- prettier-ignore -->
 {:.prompt-tip}
+
 ```ts
 import React from "react";
 
@@ -75,17 +76,27 @@ const App = () => {
   // Specify the data type when using the Button component
   return (
     <div>
-      <Button<string> label="String Button" onClick={() => alert("Clicked!")} data="Hello" />
-      <Button<number> label="Number Button" onClick={() => alert("Clicked!")} data={42} />
+      <Button<string>
+        label="String Button"
+        onClick={() => alert("Clicked!")}
+        data="Hello"
+      />
+      <Button<number>
+        label="Number Button"
+        onClick={() => alert("Clicked!")}
+        data={42}
+      />
     </div>
   );
 };
 
 export default App;
-
 ```
 
 > Summary<!-- prettier-ignore -->
 {:.prompt-tip}
+
+- at the moment when we "use" or "evoke" the function, we can pass the generic types into it. this means, we have the ability to "change" a preset function with the help of generic.
+- In our case,` <Button<string>/>` the generic type is set to be `<string>`,and the Component(function) `Button`'s generic `T` is set to be "string" as well and it is very powerful.
 
 - Generics are a powerful feature in statically-typed languages, allowing developers to parameterize types and make components more flexible and reusable. By introducing generics, a component can accept and enforce specific types that are provided when the component is used, improving type safety and reducing code duplication.TypeScript generics is very power when we try to define the type of the parameters or return values whose types may vary.
