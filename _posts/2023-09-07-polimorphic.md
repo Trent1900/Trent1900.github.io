@@ -107,7 +107,7 @@ const MyComponent = <C extends ElementType = "div">({
 }: Props<C>) => {
   const Component = as || "div";
   return (
-    <Component {...otherProps} style={{ color: `${color}` }}>
+    <Component {...otherProps} `style={{ color: `${color}` }}`>
       {children}
     </Component>
   );
