@@ -14,7 +14,7 @@ tags: [recursion, drop down]
 - And the result will looks like this:
 - ![result](https://typeofnan.dev/dfde5d8cfef5dd13108a3a1010f5ed38/menu.gif)
 
-<p style="color:red"> Before diving into the task at hand, it is essential to establish the data type we are working with. Think about a scenario where we aim to display an image using a URL stored within the data. Without prior knowledge of the data structure, attempting to achieve this task would be impossible. Therefore, defining the data type is a fundamental prerequisite.</p>
+<p> Before diving into the task at hand, it is essential to establish the data type we are working with. Think about a scenario where we aim to display an image using a URL stored within the data. Without prior knowledge of the data structure, attempting to achieve this task would be impossible. Therefore, defining the data type is a fundamental prerequisite.</p>
 - this is to say that: generics in ts does not help with this case that much.
 for data looks like :
 
