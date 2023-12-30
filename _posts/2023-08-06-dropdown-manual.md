@@ -76,8 +76,8 @@ const DropdownItem = ({ item }: DropdownItemProps) => {
           style={{
             position: "absolute",
             top: "0",
-            left: "100px",
-            width: "100px",
+            left: "90px",
+            width: "90px",
           }}
         >
           {item.subItem.map((childItem) => (
