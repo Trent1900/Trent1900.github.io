@@ -106,11 +106,7 @@ const MyComponent = <C extends ElementType = "div">({
   ...otherProps
 }: Props<C>) => {
   const Component = as || "div";
-  return (
-    <Component {...otherProps} `style={{ color: `${color}` }}`>
-      {children}
-    </Component>
-  );
+  return <Component {...otherProps}>{children}</Component>;
 };
 export default MyComponent;
 ```
